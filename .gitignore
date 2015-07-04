@@ -1,3 +1,10 @@
+*~
+\#*
+.\#*
+.*.sw?
+.DS_Store
+elpa/
+
 # Compiled
 *.elc
 
