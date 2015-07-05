@@ -8,13 +8,11 @@
 (require 'use-package)
 
 (use-package paredit :ensure t)
-
 (use-package rainbow-delimiters
   :ensure t
   :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
-
 (use-package cider :ensure t)
-
+(use-package auto-complete :ensure t)
 ; Magit requires emacs version >= 24.4,
 ; but Trisquel has 24.3 in the repos.
 (let* ((version-strs (split-string emacs-version "\\."))

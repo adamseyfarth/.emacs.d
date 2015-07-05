@@ -7,3 +7,4 @@ List of [[http://melpa.org/][MELPA]] packages:
 - [[https://github.com/magit/magit][Magit]] --- Requires emacs version >=
   24.4, which I don't have on Trisquel
 - [[https://github.com/clojure-emacs/cider][CIDER]]
+- [[http://auto-complete.org/][Auto-Complete]]
