@@ -4,5 +4,5 @@ List of [[http://melpa.org/][MELPA]] packages:
 - [[https://github.com/jwiegley/use-package][use-package]]
 - Paredit (where does MELPA get it from?)
 - [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
-- [[https://github.com/magit/magit][Magit]] (Requires emacs version >=
-  24.4, which I don't have on Trisquel.)
+- [[https://github.com/magit/magit][Magit]] --- Requires emacs version >=
+  24.4, which I don't have on Trisquel
