@@ -1,6 +1,9 @@
 # Misc
 .DS_Store
+
+# Emacs saves
 auto-save-list/
+ac-comphist.dat
 
 # Temp files
 \#*

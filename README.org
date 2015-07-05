@@ -8,3 +8,4 @@ List of [[http://melpa.org/][MELPA]] packages:
   24.4, which I don't have on Trisquel
 - [[https://github.com/clojure-emacs/cider][CIDER]]
 - [[http://auto-complete.org/][Auto-Complete]]
+- [[https://github.com/chriskempson/base16][Base16]] default-dark
