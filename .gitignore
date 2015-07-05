@@ -1,12 +1,18 @@
-*~
+# Misc
+.DS_Store
+auto-save-list/
+
+# Temp files
 \#*
 .\#*
 .*.sw?
-.DS_Store
-elpa/
+
+# Backups
+*~
 
 # Compiled
 *.elc
 
 # Packaging
 .cask
+elpa/
