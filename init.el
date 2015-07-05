@@ -20,4 +20,3 @@
 	   (>= minor-version 4))
     (use-package magit
       :ensure t)))
-
