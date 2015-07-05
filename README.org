@@ -9,6 +9,6 @@ List of packages:
   [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
 - [[http://melpa.org/#/magit][file:http://melpa.org/packages/magit-badge.svg]]
   [[https://github.com/magit/magit][Magit]] (Requires emacs version >=
-  24.4, which I don't have on Trisquel.
+  24.4, which I don't have on Trisquel.)
 
 My emacs configuration.
