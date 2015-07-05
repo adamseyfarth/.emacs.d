@@ -1,6 +1,6 @@
 * .emacs.d
 
-Lis of [[http://melpa.org/][MELPA]] packages:
+List of [[http://melpa.org/][MELPA]] packages:
 - [[https://github.com/jwiegley/use-package][use-package]]
 - Paredit (where does MELPA get it from?)
 - [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
