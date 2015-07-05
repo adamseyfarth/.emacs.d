@@ -1,12 +1,8 @@
 * .emacs.d
 
-List of packages:
-- [[http://melpa.org/#/use-package][file:http://melpa.org/packages/use-package-badge.svg]] \\
-  [[https://github.com/jwiegley/use-package][use-package]]
-- [[http://melpa.org/#/paredit][file:http://melpa.org/packages/paredit-badge.svg]] \\
-  Paredit (where does MELPA get it from?)
-- [[http://melpa.org/#/rainbow-delimiters][file:http://melpa.org/packages/rainbow-delimiters-badge.svg]] \\
-  [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
-- [[http://melpa.org/#/magit][file:http://melpa.org/packages/magit-badge.svg]] \\
-  [[https://github.com/magit/magit][Magit]] (Requires emacs version >=
+Lis of [[http://melpa.org/][MELPA]] packages:
+- [[https://github.com/jwiegley/use-package][use-package]]
+- Paredit (where does MELPA get it from?)
+- [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
+- [[https://github.com/magit/magit][Magit]] (Requires emacs version >=
   24.4, which I don't have on Trisquel.)
