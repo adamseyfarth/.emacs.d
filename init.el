@@ -1,4 +1,6 @@
 (add-hook 'find-file-hook 'linum-mode t)
+(add-hook 'find-file-hook 'delete-selection-mode 1)
+(setq-default cursor-type 'bar)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -12,7 +14,14 @@
 (use-package s :ensure t)
 (use-package base16-theme :ensure t
   :init (load-theme 'base16-default-dark t))
-(use-package paredit :ensure t)
+(use-package paredit :ensure t
+  :init
+  (add-hook 'scheme-mode 'paredit-mode t)
+  (add-hook 'emacs-lisp-mode 'paredit-mode t)
+  (add-hook 'lisp-mode 'paredit-mode t)
+  (add-hook 'lisp-interaction-mode 'paredit-mode t)
+  (add-hook 'clojure-mode 'paredit-mode t)
+  (add-hook 'hy-mode 'paredit-mode t))
 (use-package rainbow-delimiters :ensure t
   :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
 (use-package cider :ensure t)

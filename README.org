@@ -5,7 +5,7 @@ List of [[http://melpa.org/][MELPA]] packages:
 - Paredit (where does MELPA get it from?)
 - [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
 - [[https://github.com/magit/magit][Magit]] --- Requires emacs version >=
-  24.4, which I don't have on Trisquel
+  24.4, which I don't have on Trisquel or Scientific Linux
 - [[https://github.com/clojure-emacs/cider][CIDER]]
 - [[http://auto-complete.org/][Auto-Complete]]
 - [[https://github.com/chriskempson/base16][Base16]] default-dark
