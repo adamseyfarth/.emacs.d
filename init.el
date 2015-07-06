@@ -9,6 +9,7 @@
   (package-install 'use-package))
 (require 'use-package)
 
+(use-package s :ensure t)
 (use-package base16-theme :ensure t
   :init (load-theme 'base16-default-dark t))
 (use-package paredit :ensure t)
@@ -27,6 +28,18 @@
 	   (>= minor-version 4))
     (use-package magit
       :ensure t)))
+(use-package expand-region :ensure t
+  :bind ("C-=" . er/expand-region))
+(use-package multiple-cursors :ensure t)
+(use-package undo-tree :ensure t)
+(use-package slime :ensure t)
+
+; Maybe I'll be crazy enough to use this one day...
+;; (use-package ergoemacs-mode :ensure t
+;;   :init
+;;   (setq ergoemacs-theme nil)
+;;   (setq ergoemacs-keyboard-layout "colemak")
+;;   (ergoemacs-mode 1))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
