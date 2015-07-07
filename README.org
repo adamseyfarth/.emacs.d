@@ -1,16 +1,21 @@
 * .emacs.d
 
 List of [[http://melpa.org/][MELPA]] packages:
-- [[https://github.com/jwiegley/use-package][use-package]]
-- Paredit (where does MELPA get it from?)
-- [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
-- [[https://github.com/magit/magit][Magit]] --- Requires emacs version >=
-  24.4, which I don't have on Trisquel or Scientific Linux
-- [[https://github.com/clojure-emacs/cider][CIDER]]
-- [[http://auto-complete.org/][Auto-Complete]]
-- [[https://github.com/chriskempson/base16][Base16]] default-dark
-- [[https://github.com/magnars/s.el][s]]
-- [[https://github.com/magnars/expand-region.el][expand-region]]
-- multiple-cursors
-- undo-tree
-- SLIME
+- Misc power packages
+  - [[https://github.com/jwiegley/use-package][use-package]]
+  - [[https://github.com/magnars/s.el][s]]
+  - [[http://auto-complete.org/][Auto-Complete]]
+  - [[https://github.com/magnars/expand-region.el][expand-region]]
+  - [[https://github.com/magnars/multiple-cursors.el][multiple-cursors]]
+  - [[http://www.dr-qubit.org/emacs.php#undo-tree][undo-tree]]
+    ([[http://melpa.org/#/undo-tree][MELPA]],
+    [[http://www.emacswiki.org/emacs/UndoTree][EmacsWiki]])
+  - [[https://github.com/magit/magit][Magit]] --- Requires emacs version >=
+    24.4, which I don't have on Trisquel or Scientific Linux
+- Lisps
+  - Paredit (where does MELPA get it from?)
+  - [[https://github.com/clojure-emacs/cider][CIDER]]
+  - [[https://github.com/slime/slime][SLIME]]
+- Appearance
+  - [[https://github.com/chriskempson/base16][Base16]] default-dark
+  - [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]

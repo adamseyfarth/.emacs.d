@@ -6,27 +6,22 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 (package-refresh-contents)
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+(unless (package-installed-p 'use-package) (package-install 'use-package))
 (require 'use-package)
 
+;; Power emacs
 (use-package s :ensure t)
-(use-package base16-theme :ensure t
-  :init (load-theme 'base16-default-dark t))
-(use-package paredit :ensure t
-  :init
-  (add-hook 'scheme-mode 'paredit-mode t)
-  (add-hook 'emacs-lisp-mode 'paredit-mode t)
-  (add-hook 'lisp-mode 'paredit-mode t)
-  (add-hook 'lisp-interaction-mode 'paredit-mode t)
-  (add-hook 'clojure-mode 'paredit-mode t)
-  (add-hook 'hy-mode 'paredit-mode t))
-(use-package rainbow-delimiters :ensure t
-  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
-(use-package cider :ensure t)
 (use-package auto-complete :ensure t
   :init (add-hook 'find-file-hook 'auto-complete-mode t))
+(use-package expand-region :ensure t
+  :bind ("C-=" . er/expand-region))
+(use-package multiple-cursors :ensure t
+  :bind (("C-S-c C-S-c" . mc/edit-lines)
+	 ("C->" . mc/mark-next-like-this)
+	 ("C-<" . mc/mark-previous-like-this)
+	 ("C-c C-<" . mc/mark-all-like-this)
+	 ("C-S-<mouse-1>" . mc/add-cursor-on-click)))
+(use-package undo-tree :ensure t)
 ; Magit requires emacs version >= 24.4,
 ; but Trisquel has 24.3 in the repos.
 (let* ((version-strs (split-string emacs-version "\\."))
@@ -37,10 +32,21 @@
 	   (>= minor-version 4))
     (use-package magit
       :ensure t)))
-(use-package expand-region :ensure t
-  :bind ("C-=" . er/expand-region))
-(use-package multiple-cursors :ensure t)
-(use-package undo-tree :ensure t)
+;; Appearance
+(use-package base16-theme :ensure t
+  :init (load-theme 'base16-default-dark t))
+(use-package rainbow-delimiters :ensure t
+  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
+;; Lisps
+(use-package paredit :ensure t
+  :init (dolist (hook '(scheme-mode-hook
+			emacs-lisp-mode-hook
+			lisp-mode-hook
+			lisp-interaction-mode-hook
+			clojure-mode-hook
+			hy-mode-hook))
+	  (add-hook hook 'paredit-mode t)))
+(use-package cider :ensure t)
 (use-package slime :ensure t)
 
 ; Maybe I'll be crazy enough to use this one day...
