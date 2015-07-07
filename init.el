@@ -32,20 +32,29 @@
 	 ("C-S-<mouse-1>" . mc/add-cursor-on-click)))
 (use-package undo-tree :ensure t
   :init (global-undo-tree-mode))
-; Magit requires emacs version >= 24.4
+(use-package projectile :ensure t
+  :init (projectile-global-mode))
+(use-package flycheck :ensure t
+  :init (add-hook 'after-init-hook #'global-flycheck-mode))
+(use-package ag :ensure t)
+;; Git
+;; Magit (and its git-commit) require emacs version >= 24.4
 (let* ((version-strs (split-string emacs-version "\\."))
        (version-nums (mapcar 'string-to-number version-strs))
        (major-version (nth 0 version-nums))
        (minor-version (nth 1 version-nums)))
-  (if (and (>= major-version 24)
-	   (>= minor-version 4))
+  (when (and (>= major-version 24)
+	     (>= minor-version 4))
+    (use-package git-commit :ensure t)
     (use-package magit :ensure t)))
-(use-package flycheck :ensure t
-  :init (add-hook 'after-init-hook #'global-flycheck-mode))
+(use-package gitignore-mode :ensure t)
+(use-package gitconfig-mode :ensure t)
+(use-package git-timemachine :ensure t)
 ;; Elisp
 (use-package s :ensure t)
 (use-package dash :ensure t)
 (use-package dash-functional :ensure t)
+(use-package f :ensure t)
 ;; Lisps
 (use-package paredit :ensure t
   :init (dolist (hook '(scheme-mode-hook
@@ -56,12 +65,20 @@
 			hy-mode-hook))
 	  (add-hook hook 'paredit-mode t)))
 (use-package cider :ensure t)
+(use-package clojure-mode :ensure t)
 (use-package slime :ensure t)
+;; Haskell
+(use-package haskell-mode :ensure t
+  :init (add-hook 'haskell-mode-hook 'haskell-indentation-mode))
 ;; Appearance
 (use-package base16-theme :ensure t
   :init (load-theme 'base16-default-dark t))
 (use-package rainbow-delimiters :ensure t
   :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
+(use-package fill-column-indicator :ensure t
+  :init (setq fci-rule-column 80))
+(use-package whitespace :ensure t
+  :init (setq whitespace-style '(face trailing)))
 
 ; Maybe I'll be crazy enough to use this one day...
 ;; (use-package ergoemacs-mode :ensure t

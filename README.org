@@ -4,22 +4,35 @@ List of [[http://melpa.org/][MELPA]] packages:
 - Misc power packages
   - [[https://github.com/jwiegley/use-package][use-package]]
   - [[http://auto-complete.org/][Auto-Complete]]
-  - [[https://github.com/flycheck/flycheck][Flycheck]]
   - [[https://github.com/magnars/expand-region.el][expand-region]]
   - [[https://github.com/magnars/multiple-cursors.el][multiple-cursors]]
   - [[http://www.dr-qubit.org/emacs.php#undo-tree][undo-tree]]
     ([[http://melpa.org/#/undo-tree][MELPA]],
     [[http://www.emacswiki.org/emacs/UndoTree][EmacsWiki]])
-  - [[https://github.com/magit/magit][Magit]] --- Requires emacs version >=
-    24.4, which I don't have on Trisquel or Scientific Linux
+  - [[https://github.com/bbatsov/projectile][Projectile]]
+  - [[https://github.com/flycheck/flycheck][Flycheck]]
+  - [[https://github.com/Wilfred/ag.el][Ag]]
+- Git
+  - [[https://github.com/magit/magit][Magit]]
+  - [[http://melpa.org/#/git-commit][Git-commit]] --- These two
+    require emacs version >= 24.4, which I don't have...
+  - [[http://melpa.org/#/gitignore-mode][Gitignore-mode]]
+  - [[https://github.com/tonini/gitconfig.el][Gitconfig-mode]]
+  - [[https://github.com/pidu/git-timemachine][Git-timemachine]]
 - Elisp
   - [[https://github.com/magnars/s.el][s]]
   - [[https://github.com/magnars/dash.el][Dash]] (and dash-functional)
+  - [[https://github.com/rejeep/f.el][f]]
 - Lisps
   - [[http://melpa.org/#/paredit][Paredit]] (where does MELPA get it
     from?)
   - [[https://github.com/clojure-emacs/cider][CIDER]]
+  - [[https://github.com/clojure-emacs/clojure-mode][Clojure-mode]]
   - [[https://github.com/slime/slime][SLIME]]
+- Haskell
+  - [[https://github.com/haskell/haskell-mode][Haskell-mode]] (~haskell-indentation-mode~)
 - Appearance
   - [[https://github.com/chriskempson/base16][Base16]] default-dark
   - [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
+  - [[https://github.com/alpaker/Fill-Column-Indicator][Fill-column-indicator]]
+  - [[http://www.emacswiki.org/emacs/WhiteSpace][Whitespace]]
