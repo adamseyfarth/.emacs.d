@@ -3,8 +3,8 @@
 List of [[http://melpa.org/][MELPA]] packages:
 - Misc power packages
   - [[https://github.com/jwiegley/use-package][use-package]]
-  - [[https://github.com/magnars/s.el][s]]
   - [[http://auto-complete.org/][Auto-Complete]]
+  - [[https://github.com/flycheck/flycheck][Flycheck]]
   - [[https://github.com/magnars/expand-region.el][expand-region]]
   - [[https://github.com/magnars/multiple-cursors.el][multiple-cursors]]
   - [[http://www.dr-qubit.org/emacs.php#undo-tree][undo-tree]]
@@ -12,8 +12,12 @@ List of [[http://melpa.org/][MELPA]] packages:
     [[http://www.emacswiki.org/emacs/UndoTree][EmacsWiki]])
   - [[https://github.com/magit/magit][Magit]] --- Requires emacs version >=
     24.4, which I don't have on Trisquel or Scientific Linux
+- Elisp
+  - [[https://github.com/magnars/s.el][s]]
+  - [[https://github.com/magnars/dash.el][Dash]] (and dash-functional)
 - Lisps
-  - Paredit (where does MELPA get it from?)
+  - [[http://melpa.org/#/paredit][Paredit]] (where does MELPA get it
+    from?)
   - [[https://github.com/clojure-emacs/cider][CIDER]]
   - [[https://github.com/slime/slime][SLIME]]
 - Appearance

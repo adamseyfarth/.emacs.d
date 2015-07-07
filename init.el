@@ -1,3 +1,13 @@
+;;; init.el --- Adam Seyfarth's Emacs configuration
+
+;; Author: Adam Seyfarth <adam@seyfarth.name>
+
+;;; Commentary:
+
+;; Should be in the repo https://github.com/adamseyfarth/.emacs.d
+;; Uses use-package to make sure elpa packages are installed.
+
+;;; Code:
 (add-hook 'find-file-hook 'linum-mode t)
 (add-hook 'find-file-hook 'delete-selection-mode 1)
 (setq-default cursor-type 'bar)
@@ -10,7 +20,6 @@
 (require 'use-package)
 
 ;; Power emacs
-(use-package s :ensure t)
 (use-package auto-complete :ensure t
   :init (add-hook 'find-file-hook 'auto-complete-mode t))
 (use-package expand-region :ensure t
@@ -21,22 +30,22 @@
 	 ("C-<" . mc/mark-previous-like-this)
 	 ("C-c C-<" . mc/mark-all-like-this)
 	 ("C-S-<mouse-1>" . mc/add-cursor-on-click)))
-(use-package undo-tree :ensure t)
-; Magit requires emacs version >= 24.4,
-; but Trisquel has 24.3 in the repos.
+(use-package undo-tree :ensure t
+  :init (global-undo-tree-mode))
+; Magit requires emacs version >= 24.4
 (let* ((version-strs (split-string emacs-version "\\."))
        (version-nums (mapcar 'string-to-number version-strs))
        (major-version (nth 0 version-nums))
        (minor-version (nth 1 version-nums)))
   (if (and (>= major-version 24)
 	   (>= minor-version 4))
-    (use-package magit
-      :ensure t)))
-;; Appearance
-(use-package base16-theme :ensure t
-  :init (load-theme 'base16-default-dark t))
-(use-package rainbow-delimiters :ensure t
-  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
+    (use-package magit :ensure t)))
+(use-package flycheck :ensure t
+  :init (add-hook 'after-init-hook #'global-flycheck-mode))
+;; Elisp
+(use-package s :ensure t)
+(use-package dash :ensure t)
+(use-package dash-functional :ensure t)
 ;; Lisps
 (use-package paredit :ensure t
   :init (dolist (hook '(scheme-mode-hook
@@ -48,6 +57,11 @@
 	  (add-hook hook 'paredit-mode t)))
 (use-package cider :ensure t)
 (use-package slime :ensure t)
+;; Appearance
+(use-package base16-theme :ensure t
+  :init (load-theme 'base16-default-dark t))
+(use-package rainbow-delimiters :ensure t
+  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
 
 ; Maybe I'll be crazy enough to use this one day...
 ;; (use-package ergoemacs-mode :ensure t
@@ -77,3 +91,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 90 :width normal)))))
+
+(provide 'init)
+;;; init.el ends here
