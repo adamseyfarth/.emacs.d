@@ -93,7 +93,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(custom-safe-themes (quote ("7545d3bb77926908aadbd525dcb70256558ba05d7c478db6386bfb37fb6c9120" "9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" default)))
+ '(custom-safe-themes (quote ("a88946e2135d3635daf6789c475c7f093e4471ded5391253d6f88bd5271ee4be" "30611406f83fae3d001e917b03ad47bbd1c7797cf640a2e7db9d2445741e2554" "92d131a9c3ffa953b1265e9fec50d0bd366c0481305119b851055afeb4130686" "ff5acbbf20c7ba4889eb2b14395fcd55eeecbfb57853e47c7d514503ad83d6bb" "00f09a2728377a37e9a24d631de94cc7440e0803e218474cac287061951c205c" "7545d3bb77926908aadbd525dcb70256558ba05d7c478db6386bfb37fb6c9120" "9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" default)))
  '(display-time-mode t)
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-buffer-boundaries (quote left))
