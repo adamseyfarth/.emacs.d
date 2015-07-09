@@ -8,9 +8,13 @@
 ;; Uses use-package to make sure elpa packages are installed.
 
 ;;; Code:
+
 (add-hook 'find-file-hook 'linum-mode t)
 (add-hook 'find-file-hook 'delete-selection-mode 1)
 (setq-default cursor-type 'bar)
+(require 'server)
+(when (and window-system (not (server-running-p))) (server-start))
+(setq inhibit-startup-screen t)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))

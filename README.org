@@ -21,7 +21,7 @@ List of [[http://melpa.org/][MELPA]] packages:
   - [[https://github.com/pidu/git-timemachine][Git-timemachine]]
 - Elisp
   - [[https://github.com/magnars/s.el][s]]
-  - [[https://github.com/magnars/dash.el][Dash]] (and dash-functional)
+  - [[https://github.com/magnars/dash.el][Dash]] (and ~dash-functional~)
   - [[https://github.com/rejeep/f.el][f]]
 - Lisps
   - [[http://melpa.org/#/paredit][Paredit]] (where does MELPA get it
@@ -32,7 +32,7 @@ List of [[http://melpa.org/][MELPA]] packages:
 - Haskell
   - [[https://github.com/haskell/haskell-mode][Haskell-mode]] (~haskell-indentation-mode~)
 - Appearance
-  - [[https://github.com/chriskempson/base16][Base16]] default-dark
+  - [[https://github.com/chriskempson/base16][Base16]] ~default-dark~
   - [[https://github.com/Fanael/rainbow-delimiters][Rainbow-delimiters]]
   - [[https://github.com/alpaker/Fill-Column-Indicator][Fill-column-indicator]]
   - [[http://www.emacswiki.org/emacs/WhiteSpace][Whitespace]]
