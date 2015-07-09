@@ -3,7 +3,9 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	indent-for-tab-command
 	org-self-insert-command
+	python-indent-electric-colon
 	))
 
 (setq mc/cmds-to-run-once

@@ -11,6 +11,7 @@
 
 (add-hook 'find-file-hook 'linum-mode t)
 (add-hook 'find-file-hook 'delete-selection-mode 1)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode t)
 (setq-default cursor-type 'bar)
 (require 'server)
 (when (and window-system (not (server-running-p))) (server-start))
