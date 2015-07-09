@@ -62,6 +62,7 @@
 			lisp-mode-hook
 			lisp-interaction-mode-hook
 			clojure-mode-hook
+			cider-repl-mode
 			hy-mode-hook))
 	  (add-hook hook 'paredit-mode t)))
 (use-package cider :ensure t)
