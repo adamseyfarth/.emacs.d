@@ -103,7 +103,6 @@
  '(display-time-mode t)
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-buffer-boundaries (quote left))
- '(menu-bar-mode nil)
  '(save-place t nil (saveplace))
  '(show-paren-mode t)
  '(size-indication-mode t)
