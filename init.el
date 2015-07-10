@@ -85,6 +85,8 @@
   :init (setq fci-rule-column 80))
 (use-package whitespace :ensure t
   :init (setq whitespace-style '(face trailing)))
+(use-package org :ensure t)
+(use-package typo :ensure t)
 
 ; Maybe I'll be crazy enough to use this one day...
 ;; (use-package ergoemacs-mode :ensure t
@@ -92,6 +94,11 @@
 ;;   (setq ergoemacs-theme nil)
 ;;   (setq ergoemacs-keyboard-layout "colemak")
 ;;   (ergoemacs-mode 1))
+
+(setq org-export-html-style-include-scripts nil
+      org-export-html-style-include-defaultgs nil
+      org-export-html-style
+      "<link rel=\"stylesheet\" type=\"text/css\" href=\"org-style.css\" />")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

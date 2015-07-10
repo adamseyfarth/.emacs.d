@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	fill-paragraph
 	indent-for-tab-command
 	org-self-insert-command
 	python-indent-electric-colon
