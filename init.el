@@ -76,6 +76,11 @@
 ;; Haskell
 (use-package haskell-mode :ensure t
   :init (add-hook 'haskell-mode-hook 'haskell-indentation-mode))
+;; Markup
+(use-package typo :ensure t)
+(use-package org :ensure t)
+(use-package markdown-mode :ensure t
+  :init (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode)))
 ;; Appearance
 (use-package base16-theme :ensure t
   :init (load-theme 'base16-default-dark t))
@@ -85,8 +90,6 @@
   :init (setq fci-rule-column 80))
 (use-package whitespace :ensure t
   :init (setq whitespace-style '(face trailing)))
-(use-package org :ensure t)
-(use-package typo :ensure t)
 
 ; Maybe I'll be crazy enough to use this one day...
 ;; (use-package ergoemacs-mode :ensure t
