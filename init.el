@@ -29,40 +29,41 @@
 ; (package-refresh-contents)
 (unless (package-installed-p 'use-package) (package-install 'use-package))
 (require 'use-package)
+(setq use-package-always-ensure t)
 
 ;; Power emacs
-(use-package auto-complete :ensure t
+(use-package auto-complete
   :init (add-hook 'find-file-hook 'auto-complete-mode t))
-(use-package expand-region :ensure t
+(use-package expand-region
   :bind ("C-=" . er/expand-region))
-(use-package multiple-cursors :ensure t
+(use-package multiple-cursors
   :bind (("C-S-c C-S-c" . mc/edit-lines)
 	 ("C->" . mc/mark-next-like-this)
 	 ("C-<" . mc/mark-previous-like-this)
 	 ("C-c C-<" . mc/mark-all-like-this)
 	 ("C-S-<mouse-1>" . mc/add-cursor-on-click)))
-(use-package undo-tree :ensure t
+(use-package undo-tree
   :init (global-undo-tree-mode))
-(use-package projectile :ensure t
+(use-package projectile
   :init (projectile-global-mode))
-(use-package flycheck :ensure t
+(use-package flycheck
   :init (add-hook 'after-init-hook #'global-flycheck-mode))
-(use-package ag :ensure t)
+(use-package ag)
 ;; Git
 ;; Magit requires emacs version >= 24.4
 (when (and (>= emacs-major-version 24)
 	   (>= emacs-minor-version 4))
-  (use-package magit :ensure t))
-(use-package gitignore-mode :ensure t)
-(use-package gitconfig-mode :ensure t)
-(use-package git-timemachine :ensure t)
+  (use-package magit))
+(use-package gitignore-mode)
+(use-package gitconfig-mode)
+(use-package git-timemachine)
 ;; Elisp
-(use-package s :ensure t)
-(use-package dash :ensure t)
-(use-package dash-functional :ensure t)
-(use-package f :ensure t)
+(use-package s)
+(use-package dash)
+(use-package dash-functional)
+(use-package f)
 ;; Lisps
-(use-package paredit :ensure t
+(use-package paredit
   :init (dolist (hook '(scheme-mode-hook
 			emacs-lisp-mode-hook
 			lisp-mode-hook
@@ -71,31 +72,31 @@
 			cider-repl-mode-hook
 			hy-mode-hook))
 	  (add-hook hook 'paredit-mode t)))
-(use-package cider :ensure t)
-(use-package clojure-mode :ensure t)
-(use-package slime :ensure t)
+(use-package cider)
+(use-package clojure-mode)
+(use-package slime)
 ;; Haskell
-(use-package haskell-mode :ensure t
+(use-package haskell-mode
   :init (add-hook 'haskell-mode-hook 'haskell-indentation-mode))
 ;; Markup
-(use-package typo :ensure t)
-(use-package org :ensure t)
-(use-package markdown-mode :ensure t
+(use-package typo)
+(use-package org)
+(use-package markdown-mode
   :init (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode)))
 ;; Appearance
-(use-package base16-theme :ensure t
+(use-package base16-theme
   :init (load-theme 'base16-default-dark t))
-(use-package rainbow-delimiters :ensure t
+(use-package rainbow-delimiters
   :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
-(use-package fill-column-indicator :ensure t
+(use-package fill-column-indicator
   :init (setq fci-rule-column 80))
-(use-package whitespace :ensure t
+(use-package whitespace
   :init
   (setq whitespace-style '(face trailing))
   (add-hook 'prog-mode-hook 'whitespace-mode t))
 
 ; Maybe I'll be crazy enough to use this one day...
-;; (use-package ergoemacs-mode :ensure t
+;; (use-package ergoemacs-mode
 ;;   :init
 ;;   (setq ergoemacs-theme nil)
 ;;   (setq ergoemacs-keyboard-layout "colemak")
