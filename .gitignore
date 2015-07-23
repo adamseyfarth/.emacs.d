@@ -6,6 +6,7 @@ auto-save-list/
 ac-comphist.dat
 ergoemacs-extras/
 projectile-bookmarks.eld
+.emacs.desktop*
 
 # Temp files
 \#*

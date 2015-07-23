@@ -97,7 +97,7 @@
   :init (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode)))
 ;; Appearance
 (use-package base16-theme
-  :init (load-theme 'base16-default-dark t))
+  :init (load-theme 'base16-ashes-dark t))
 (use-package rainbow-delimiters
   :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode t))
 (use-package fill-column-indicator
@@ -125,8 +125,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(custom-safe-themes (quote ("f0e69da2cf73c7f153fc09ed3e0ba6e1fd670fec09b8a6a8ed7b4f9efea3b501" "0240d45644b370b0518e8407f5990a243c769fb0150a7e74297e6f7052a04a72" "6dbd0dd4c344f1ca534422cc5a1fd3ed822dcde947ae983948b70c7284a0ed33" "3f04f37604c5f5cc3c71bc1a4a604ed8be340d0f150946b25658e403ccbad6d2" "a88946e2135d3635daf6789c475c7f093e4471ded5391253d6f88bd5271ee4be" "30611406f83fae3d001e917b03ad47bbd1c7797cf640a2e7db9d2445741e2554" "92d131a9c3ffa953b1265e9fec50d0bd366c0481305119b851055afeb4130686" "ff5acbbf20c7ba4889eb2b14395fcd55eeecbfb57853e47c7d514503ad83d6bb" "00f09a2728377a37e9a24d631de94cc7440e0803e218474cac287061951c205c" "7545d3bb77926908aadbd525dcb70256558ba05d7c478db6386bfb37fb6c9120" "9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" default)))
+ '(custom-safe-themes (quote ("d72836155cd3b3e52fd86a9164120d597cbe12a67609ab90effa54710b2ac53b" "73ae6088787f6f72ef52f19698b25bc6f0edf47b9e677bf0a85e3a1e8a7a3b17" "cda6cb17953b3780294fa6688b3fe0d3d12c1ef019456333e3d5af01d4d6c054" "6ebb2401451dc6d01cd761eef8fe24812a57793c5ccc427b600893fa1d767b1d" "f0e69da2cf73c7f153fc09ed3e0ba6e1fd670fec09b8a6a8ed7b4f9efea3b501" "0240d45644b370b0518e8407f5990a243c769fb0150a7e74297e6f7052a04a72" "6dbd0dd4c344f1ca534422cc5a1fd3ed822dcde947ae983948b70c7284a0ed33" "3f04f37604c5f5cc3c71bc1a4a604ed8be340d0f150946b25658e403ccbad6d2" "a88946e2135d3635daf6789c475c7f093e4471ded5391253d6f88bd5271ee4be" "30611406f83fae3d001e917b03ad47bbd1c7797cf640a2e7db9d2445741e2554" "92d131a9c3ffa953b1265e9fec50d0bd366c0481305119b851055afeb4130686" "ff5acbbf20c7ba4889eb2b14395fcd55eeecbfb57853e47c7d514503ad83d6bb" "00f09a2728377a37e9a24d631de94cc7440e0803e218474cac287061951c205c" "7545d3bb77926908aadbd525dcb70256558ba05d7c478db6386bfb37fb6c9120" "9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" default)))
  '(display-time-mode t)
+ '(font-use-system-font nil)
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-buffer-boundaries (quote left))
  '(org-agenda-files (quote ("~/plan/plan.org")))
